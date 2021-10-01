@@ -1,0 +1,28 @@
+> vi /etc/vsftpd/vsftpd.conf)
+                 Check the following:
+	i.	anonymous_enable=YES
+	ii.	anon_upload_enable=YES
+	iii.	anon_mkdir_write_enable=YES
+	iv.	dirmessage_enable=YES
+	v.	ascii_upload_enable=YES
+	vi.	ascii_download_enable=YES
+>service vsftpd restart
+
+#CREATE TWO USER
+
+Login as super user in terminal
+	USERADD IT132
+	USERADD SKpandey
+
+1.	Add TMSL folder in both (login from ftp then > mkdir TMSL)
+2.	Now give read, write and execute permission on TMSL directory
+            >> chmod 777 TMSL
+
+Upload SKpandey.doc file into TMSL folder
+1.	Open command Prompt.
+2.	Open ftp connection
+3.	Upload file using put command in command prompt 
+             >> put *.doc
+             >>enter y to upload
+
+Similarly login into user SKpandey:
